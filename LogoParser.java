@@ -1,4 +1,4 @@
-// $ANTLR 3.5.2 Logo.g 2017-12-15 22:02:24
+// $ANTLR 3.5.2 Logo.g 2017-12-15 22:03:52
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -13,15 +13,14 @@ import org.antlr.runtime.tree.*;
 @SuppressWarnings("all")
 public class LogoParser extends Parser {
 	public static final String[] tokenNames = new String[] {
-		"<invalid>", "<EOR>", "<DOWN>", "<UP>", "BACK", "CALL", "CLEAR", "COMPOUND", 
-		"DIV", "END", "EQ", "FORWARD", "GREATER", "HIDE", "IF", "LEFT", "LESS", 
-		"LOCAL", "LST", "MAKE", "MINUS", "MULT", "NEG", "NEQ", "NUM", "PENDOWN", 
-		"PENUP", "PLUS", "REPCOUNT", "REPEAT", "RIGHT", "SETH", "SETPCRGB", "SETPENSIZE", 
-		"SETPOS", "SHOW", "SIMPLE", "STOP", "TO", "VAR", "WS", "'\"'", "'('", 
-		"')'", "'*'", "'+'", "'-'", "'/'", "':'", "'['", "']'"
+		"<invalid>", "<EOR>", "<DOWN>", "<UP>", "BACK", "CALL", "CLEAR", "COMMENT", 
+		"COMPOUND", "DIV", "END", "EQ", "FORWARD", "GREATER", "HIDE", "IF", "LEFT", 
+		"LESS", "LOCAL", "LST", "MAKE", "MINUS", "MULT", "NEG", "NEQ", "NUM", 
+		"PENDOWN", "PENUP", "PLUS", "REPCOUNT", "REPEAT", "RIGHT", "SETH", "SETPCRGB", 
+		"SETPENSIZE", "SETPOS", "SHOW", "SIMPLE", "STOP", "TO", "VAR", "WS", "'\"'", 
+		"'('", "')'", "'*'", "'+'", "'-'", "'/'", "':'", "'['", "']'"
 	};
 	public static final int EOF=-1;
-	public static final int T__41=41;
 	public static final int T__42=42;
 	public static final int T__43=43;
 	public static final int T__44=44;
@@ -31,43 +30,45 @@ public class LogoParser extends Parser {
 	public static final int T__48=48;
 	public static final int T__49=49;
 	public static final int T__50=50;
+	public static final int T__51=51;
 	public static final int BACK=4;
 	public static final int CALL=5;
 	public static final int CLEAR=6;
-	public static final int COMPOUND=7;
-	public static final int DIV=8;
-	public static final int END=9;
-	public static final int EQ=10;
-	public static final int FORWARD=11;
-	public static final int GREATER=12;
-	public static final int HIDE=13;
-	public static final int IF=14;
-	public static final int LEFT=15;
-	public static final int LESS=16;
-	public static final int LOCAL=17;
-	public static final int LST=18;
-	public static final int MAKE=19;
-	public static final int MINUS=20;
-	public static final int MULT=21;
-	public static final int NEG=22;
-	public static final int NEQ=23;
-	public static final int NUM=24;
-	public static final int PENDOWN=25;
-	public static final int PENUP=26;
-	public static final int PLUS=27;
-	public static final int REPCOUNT=28;
-	public static final int REPEAT=29;
-	public static final int RIGHT=30;
-	public static final int SETH=31;
-	public static final int SETPCRGB=32;
-	public static final int SETPENSIZE=33;
-	public static final int SETPOS=34;
-	public static final int SHOW=35;
-	public static final int SIMPLE=36;
-	public static final int STOP=37;
-	public static final int TO=38;
-	public static final int VAR=39;
-	public static final int WS=40;
+	public static final int COMMENT=7;
+	public static final int COMPOUND=8;
+	public static final int DIV=9;
+	public static final int END=10;
+	public static final int EQ=11;
+	public static final int FORWARD=12;
+	public static final int GREATER=13;
+	public static final int HIDE=14;
+	public static final int IF=15;
+	public static final int LEFT=16;
+	public static final int LESS=17;
+	public static final int LOCAL=18;
+	public static final int LST=19;
+	public static final int MAKE=20;
+	public static final int MINUS=21;
+	public static final int MULT=22;
+	public static final int NEG=23;
+	public static final int NEQ=24;
+	public static final int NUM=25;
+	public static final int PENDOWN=26;
+	public static final int PENUP=27;
+	public static final int PLUS=28;
+	public static final int REPCOUNT=29;
+	public static final int REPEAT=30;
+	public static final int RIGHT=31;
+	public static final int SETH=32;
+	public static final int SETPCRGB=33;
+	public static final int SETPENSIZE=34;
+	public static final int SETPOS=35;
+	public static final int SHOW=36;
+	public static final int SIMPLE=37;
+	public static final int STOP=38;
+	public static final int TO=39;
+	public static final int VAR=40;
+	public static final int WS=41;
 
 	// delegates
 	public Parser[] getDelegates() {
@@ -664,7 +665,6 @@ public class LogoParser extends Parser {
 		RewriteRuleTokenStream stream_CALL=new RewriteRuleTokenStream(adaptor,"token CALL");
 		RewriteRuleTokenStream stream_LEFT=new RewriteRuleTokenStream(adaptor,"token LEFT");
 		RewriteRuleTokenStream stream_REPEAT=new RewriteRuleTokenStream(adaptor,"token REPEAT");
-		RewriteRuleTokenStream stream_49=new RewriteRuleTokenStream(adaptor,"token 49");
 		RewriteRuleTokenStream stream_VAR=new RewriteRuleTokenStream(adaptor,"token VAR");
 		RewriteRuleTokenStream stream_PENDOWN=new RewriteRuleTokenStream(adaptor,"token PENDOWN");
 		RewriteRuleTokenStream stream_FORWARD=new RewriteRuleTokenStream(adaptor,"token FORWARD");
@@ -676,8 +676,9 @@ public class LogoParser extends Parser {
 		RewriteRuleTokenStream stream_END=new RewriteRuleTokenStream(adaptor,"token END");
 		RewriteRuleTokenStream stream_50=new RewriteRuleTokenStream(adaptor,"token 50");
 		RewriteRuleTokenStream stream_TO=new RewriteRuleTokenStream(adaptor,"token TO");
-		RewriteRuleTokenStream stream_41=new RewriteRuleTokenStream(adaptor,"token 41");
+		RewriteRuleTokenStream stream_51=new RewriteRuleTokenStream(adaptor,"token 51");
 		RewriteRuleTokenStream stream_IF=new RewriteRuleTokenStream(adaptor,"token IF");
+		RewriteRuleTokenStream stream_42=new RewriteRuleTokenStream(adaptor,"token 42");
 		RewriteRuleTokenStream stream_CLEAR=new RewriteRuleTokenStream(adaptor,"token CLEAR");
 		RewriteRuleTokenStream stream_SETPENSIZE=new RewriteRuleTokenStream(adaptor,"token SETPENSIZE");
 		RewriteRuleSubtreeStream stream_bexpr=new RewriteRuleSubtreeStream(adaptor,"rule bexpr");
@@ -1044,16 +1045,16 @@ public class LogoParser extends Parser {
 					state._fsp--;
 					if (state.failed) return retval;
 					if ( state.backtracking==0 ) stream_expr.add(expr17.getTree());
-					char_literal18=(Token)match(input,49,FOLLOW_49_in_stat299); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_49.add(char_literal18);
+					char_literal18=(Token)match(input,50,FOLLOW_50_in_stat299); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_50.add(char_literal18);
 
 					pushFollow(FOLLOW_stats_in_stat301);
 					stats19=stats();
 					state._fsp--;
 					if (state.failed) return retval;
 					if ( state.backtracking==0 ) stream_stats.add(stats19.getTree());
-					char_literal20=(Token)match(input,50,FOLLOW_50_in_stat303); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_50.add(char_literal20);
+					char_literal20=(Token)match(input,51,FOLLOW_51_in_stat303); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_51.add(char_literal20);
 
 					// AST REWRITE
 					// elements: expr, REPEAT, stats
@@ -1092,8 +1093,8 @@ public class LogoParser extends Parser {
 					MAKE21=(Token)match(input,MAKE,FOLLOW_MAKE_in_stat321); if (state.failed) return retval; 
 					if ( state.backtracking==0 ) stream_MAKE.add(MAKE21);
 
-					char_literal22=(Token)match(input,41,FOLLOW_41_in_stat323); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_41.add(char_literal22);
+					char_literal22=(Token)match(input,42,FOLLOW_42_in_stat323); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_42.add(char_literal22);
 
 					VAR23=(Token)match(input,VAR,FOLLOW_VAR_in_stat325); if (state.failed) return retval; 
 					if ( state.backtracking==0 ) stream_VAR.add(VAR23);
@@ -1140,8 +1141,8 @@ public class LogoParser extends Parser {
 					LOCAL25=(Token)match(input,LOCAL,FOLLOW_LOCAL_in_stat345); if (state.failed) return retval; 
 					if ( state.backtracking==0 ) stream_LOCAL.add(LOCAL25);
 
-					char_literal26=(Token)match(input,41,FOLLOW_41_in_stat347); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_41.add(char_literal26);
+					char_literal26=(Token)match(input,42,FOLLOW_42_in_stat347); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_42.add(char_literal26);
 
 					VAR27=(Token)match(input,VAR,FOLLOW_VAR_in_stat349); if (state.failed) return retval; 
 					if ( state.backtracking==0 ) stream_VAR.add(VAR27);
@@ -1222,16 +1223,16 @@ public class LogoParser extends Parser {
 					state._fsp--;
 					if (state.failed) return retval;
 					if ( state.backtracking==0 ) stream_bexpr.add(bexpr30.getTree());
-					char_literal31=(Token)match(input,49,FOLLOW_49_in_stat383); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_49.add(char_literal31);
+					char_literal31=(Token)match(input,50,FOLLOW_50_in_stat383); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_50.add(char_literal31);
 
 					pushFollow(FOLLOW_stats_in_stat385);
 					stats32=stats();
 					state._fsp--;
 					if (state.failed) return retval;
 					if ( state.backtracking==0 ) stream_stats.add(stats32.getTree());
-					char_literal33=(Token)match(input,50,FOLLOW_50_in_stat387); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_50.add(char_literal33);
+					char_literal33=(Token)match(input,51,FOLLOW_51_in_stat387); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_51.add(char_literal33);
 
 					// AST REWRITE
 					// elements: stats, IF, bexpr
@@ -1569,7 +1570,7 @@ public class LogoParser extends Parser {
 
 		Object char_literal56_tree=null;
 		Object VAR57_tree=null;
-		RewriteRuleTokenStream stream_48=new RewriteRuleTokenStream(adaptor,"token 48");
+		RewriteRuleTokenStream stream_49=new RewriteRuleTokenStream(adaptor,"token 49");
 		RewriteRuleTokenStream stream_VAR=new RewriteRuleTokenStream(adaptor,"token VAR");
 
 		try {
@@ -1583,7 +1584,7 @@ public class LogoParser extends Parser {
 			while (true) {
 				int alt3=2;
 				int LA3_0 = input.LA(1);
-				if ( (LA3_0==48) ) {
+				if ( (LA3_0==49) ) {
 					alt3=1;
 				}
 
@@ -1591,8 +1592,8 @@ public class LogoParser extends Parser {
 				case 1 :
 					// Logo.g:55:6: ':' VAR
 					{
-					char_literal56=(Token)match(input,48,FOLLOW_48_in_params546); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_48.add(char_literal56);
+					char_literal56=(Token)match(input,49,FOLLOW_49_in_params546); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_49.add(char_literal56);
 
 					VAR57=(Token)match(input,VAR,FOLLOW_VAR_in_params548); if (state.failed) return retval; 
 					if ( state.backtracking==0 ) stream_VAR.add(VAR57);
@@ -1693,7 +1694,7 @@ public class LogoParser extends Parser {
 			while (true) {
 				int alt4=2;
 				int LA4_0 = input.LA(1);
-				if ( (LA4_0==NUM||LA4_0==REPCOUNT||LA4_0==42||LA4_0==46||LA4_0==48) ) {
+				if ( (LA4_0==NUM||LA4_0==REPCOUNT||LA4_0==43||LA4_0==47||LA4_0==49) ) {
 					alt4=1;
 				}
 
@@ -1829,7 +1830,7 @@ public class LogoParser extends Parser {
 
 				}
 				break;
-			case 42:
+			case 43:
 				{
 				int LA5_2 = input.LA(2);
 				if ( (synpred23_Logo()) ) {
@@ -1847,7 +1848,7 @@ public class LogoParser extends Parser {
 
 				}
 				break;
-			case 46:
+			case 47:
 				{
 				int LA5_3 = input.LA(2);
 				if ( (synpred23_Logo()) ) {
@@ -1883,7 +1884,7 @@ public class LogoParser extends Parser {
 
 				}
 				break;
-			case 48:
+			case 49:
 				{
 				int LA5_5 = input.LA(2);
 				if ( (synpred23_Logo()) ) {
@@ -2062,8 +2063,8 @@ public class LogoParser extends Parser {
 
 		Object char_literal72_tree=null;
 		Object char_literal75_tree=null;
-		RewriteRuleTokenStream stream_45=new RewriteRuleTokenStream(adaptor,"token 45");
 		RewriteRuleTokenStream stream_46=new RewriteRuleTokenStream(adaptor,"token 46");
+		RewriteRuleTokenStream stream_47=new RewriteRuleTokenStream(adaptor,"token 47");
 		RewriteRuleSubtreeStream stream_expr=new RewriteRuleSubtreeStream(adaptor,"rule expr");
 		RewriteRuleSubtreeStream stream_multExpr=new RewriteRuleSubtreeStream(adaptor,"rule multExpr");
 
@@ -2088,7 +2089,7 @@ public class LogoParser extends Parser {
 
 				}
 				break;
-			case 42:
+			case 43:
 				{
 				int LA6_2 = input.LA(2);
 				if ( (synpred26_Logo()) ) {
@@ -2103,7 +2104,7 @@ public class LogoParser extends Parser {
 
 				}
 				break;
-			case 46:
+			case 47:
 				{
 				int LA6_3 = input.LA(2);
 				if ( (synpred26_Logo()) ) {
@@ -2133,7 +2134,7 @@ public class LogoParser extends Parser {
 
 				}
 				break;
-			case 48:
+			case 49:
 				{
 				int LA6_5 = input.LA(2);
 				if ( (synpred26_Logo()) ) {
@@ -2163,8 +2164,8 @@ public class LogoParser extends Parser {
 					state._fsp--;
 					if (state.failed) return retval;
 					if ( state.backtracking==0 ) stream_multExpr.add(multExpr71.getTree());
-					char_literal72=(Token)match(input,45,FOLLOW_45_in_expr667); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_45.add(char_literal72);
+					char_literal72=(Token)match(input,46,FOLLOW_46_in_expr667); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_46.add(char_literal72);
 
 					pushFollow(FOLLOW_expr_in_expr669);
 					expr73=expr();
@@ -2210,8 +2211,8 @@ public class LogoParser extends Parser {
 					state._fsp--;
 					if (state.failed) return retval;
 					if ( state.backtracking==0 ) stream_multExpr.add(multExpr74.getTree());
-					char_literal75=(Token)match(input,46,FOLLOW_46_in_expr689); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_46.add(char_literal75);
+					char_literal75=(Token)match(input,47,FOLLOW_47_in_expr689); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_47.add(char_literal75);
 
 					pushFollow(FOLLOW_expr_in_expr691);
 					expr76=expr();
@@ -2330,8 +2331,8 @@ public class LogoParser extends Parser {
 
 		Object char_literal79_tree=null;
 		Object char_literal82_tree=null;
-		RewriteRuleTokenStream stream_44=new RewriteRuleTokenStream(adaptor,"token 44");
-		RewriteRuleTokenStream stream_47=new RewriteRuleTokenStream(adaptor,"token 47");
+		RewriteRuleTokenStream stream_45=new RewriteRuleTokenStream(adaptor,"token 45");
+		RewriteRuleTokenStream stream_48=new RewriteRuleTokenStream(adaptor,"token 48");
 		RewriteRuleSubtreeStream stream_atom=new RewriteRuleSubtreeStream(adaptor,"rule atom");
 		RewriteRuleSubtreeStream stream_multExpr=new RewriteRuleSubtreeStream(adaptor,"rule multExpr");
 
@@ -2356,7 +2357,7 @@ public class LogoParser extends Parser {
 
 				}
 				break;
-			case 42:
+			case 43:
 				{
 				int LA7_2 = input.LA(2);
 				if ( (synpred28_Logo()) ) {
@@ -2371,7 +2372,7 @@ public class LogoParser extends Parser {
 
 				}
 				break;
-			case 46:
+			case 47:
 				{
 				int LA7_3 = input.LA(2);
 				if ( (synpred28_Logo()) ) {
@@ -2401,7 +2402,7 @@ public class LogoParser extends Parser {
 
 				}
 				break;
-			case 48:
+			case 49:
 				{
 				int LA7_5 = input.LA(2);
 				if ( (synpred28_Logo()) ) {
@@ -2431,8 +2432,8 @@ public class LogoParser extends Parser {
 					state._fsp--;
 					if (state.failed) return retval;
 					if ( state.backtracking==0 ) stream_atom.add(atom78.getTree());
-					char_literal79=(Token)match(input,44,FOLLOW_44_in_multExpr725); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_44.add(char_literal79);
+					char_literal79=(Token)match(input,45,FOLLOW_45_in_multExpr725); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_45.add(char_literal79);
 
 					pushFollow(FOLLOW_multExpr_in_multExpr727);
 					multExpr80=multExpr();
@@ -2478,8 +2479,8 @@ public class LogoParser extends Parser {
 					state._fsp--;
 					if (state.failed) return retval;
 					if ( state.backtracking==0 ) stream_atom.add(atom81.getTree());
-					char_literal82=(Token)match(input,47,FOLLOW_47_in_multExpr747); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_47.add(char_literal82);
+					char_literal82=(Token)match(input,48,FOLLOW_48_in_multExpr747); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_48.add(char_literal82);
 
 					pushFollow(FOLLOW_multExpr_in_multExpr749);
 					multExpr83=multExpr();
@@ -2605,12 +2606,12 @@ public class LogoParser extends Parser {
 		Object REPCOUNT91_tree=null;
 		Object char_literal92_tree=null;
 		Object VAR93_tree=null;
-		RewriteRuleTokenStream stream_46=new RewriteRuleTokenStream(adaptor,"token 46");
-		RewriteRuleTokenStream stream_48=new RewriteRuleTokenStream(adaptor,"token 48");
+		RewriteRuleTokenStream stream_44=new RewriteRuleTokenStream(adaptor,"token 44");
+		RewriteRuleTokenStream stream_47=new RewriteRuleTokenStream(adaptor,"token 47");
 		RewriteRuleTokenStream stream_REPCOUNT=new RewriteRuleTokenStream(adaptor,"token REPCOUNT");
+		RewriteRuleTokenStream stream_49=new RewriteRuleTokenStream(adaptor,"token 49");
 		RewriteRuleTokenStream stream_VAR=new RewriteRuleTokenStream(adaptor,"token VAR");
 		RewriteRuleTokenStream stream_NUM=new RewriteRuleTokenStream(adaptor,"token NUM");
-		RewriteRuleTokenStream stream_42=new RewriteRuleTokenStream(adaptor,"token 42");
 		RewriteRuleTokenStream stream_43=new RewriteRuleTokenStream(adaptor,"token 43");
 		RewriteRuleSubtreeStream stream_expr=new RewriteRuleSubtreeStream(adaptor,"rule expr");
 		RewriteRuleSubtreeStream stream_atom=new RewriteRuleSubtreeStream(adaptor,"rule atom");
@@ -2626,12 +2627,12 @@ public class LogoParser extends Parser {
 				alt8=1;
 				}
 				break;
-			case 42:
+			case 43:
 				{
 				alt8=2;
 				}
 				break;
-			case 46:
+			case 47:
 				{
 				alt8=3;
 				}
@@ -2641,7 +2642,7 @@ public class LogoParser extends Parser {
 				alt8=4;
 				}
 				break;
-			case 48:
+			case 49:
 				{
 				alt8=5;
 				}
@@ -2691,16 +2692,16 @@ public class LogoParser extends Parser {
 				case 2 :
 					// Logo.g:83:4: '(' expr ')'
 					{
-					char_literal86=(Token)match(input,42,FOLLOW_42_in_atom792); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_42.add(char_literal86);
+					char_literal86=(Token)match(input,43,FOLLOW_43_in_atom792); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_43.add(char_literal86);
 
 					pushFollow(FOLLOW_expr_in_atom794);
 					expr87=expr();
 					state._fsp--;
 					if (state.failed) return retval;
 					if ( state.backtracking==0 ) stream_expr.add(expr87.getTree());
-					char_literal88=(Token)match(input,43,FOLLOW_43_in_atom796); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_43.add(char_literal88);
+					char_literal88=(Token)match(input,44,FOLLOW_44_in_atom796); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_44.add(char_literal88);
 
 					// AST REWRITE
 					// elements: expr
@@ -2728,8 +2729,8 @@ public class LogoParser extends Parser {
 				case 3 :
 					// Logo.g:84:4: '-' atom
 					{
-					char_literal89=(Token)match(input,46,FOLLOW_46_in_atom805); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_46.add(char_literal89);
+					char_literal89=(Token)match(input,47,FOLLOW_47_in_atom805); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_47.add(char_literal89);
 
 					pushFollow(FOLLOW_atom_in_atom807);
 					atom90=atom();
@@ -2798,8 +2799,8 @@ public class LogoParser extends Parser {
 				case 5 :
 					// Logo.g:86:7: ':' VAR
 					{
-					char_literal92=(Token)match(input,48,FOLLOW_48_in_atom835); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_48.add(char_literal92);
+					char_literal92=(Token)match(input,49,FOLLOW_49_in_atom835); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_49.add(char_literal92);
 
 					VAR93=(Token)match(input,VAR,FOLLOW_VAR_in_atom837); if (state.failed) return retval; 
 					if ( state.backtracking==0 ) stream_VAR.add(VAR93);
@@ -2952,7 +2953,7 @@ public class LogoParser extends Parser {
 		state._fsp--;
 		if (state.failed) return;
 
-		match(input,45,FOLLOW_45_in_synpred26_Logo667); if (state.failed) return;
+		match(input,46,FOLLOW_46_in_synpred26_Logo667); if (state.failed) return;
 
 		pushFollow(FOLLOW_expr_in_synpred26_Logo669);
 		expr();
@@ -2974,7 +2975,7 @@ public class LogoParser extends Parser {
 		state._fsp--;
 		if (state.failed) return;
 
-		match(input,46,FOLLOW_46_in_synpred27_Logo689); if (state.failed) return;
+		match(input,47,FOLLOW_47_in_synpred27_Logo689); if (state.failed) return;
 
 		pushFollow(FOLLOW_expr_in_synpred27_Logo691);
 		expr();
@@ -2996,7 +2997,7 @@ public class LogoParser extends Parser {
 		state._fsp--;
 		if (state.failed) return;
 
-		match(input,44,FOLLOW_44_in_synpred28_Logo725); if (state.failed) return;
+		match(input,45,FOLLOW_45_in_synpred28_Logo725); if (state.failed) return;
 
 		pushFollow(FOLLOW_multExpr_in_synpred28_Logo727);
 		multExpr();
@@ -3018,7 +3019,7 @@ public class LogoParser extends Parser {
 		state._fsp--;
 		if (state.failed) return;
 
-		match(input,47,FOLLOW_47_in_synpred29_Logo747); if (state.failed) return;
+		match(input,48,FOLLOW_48_in_synpred29_Logo747); if (state.failed) return;
 
 		pushFollow(FOLLOW_multExpr_in_synpred29_Logo749);
 		multExpr();
@@ -3149,118 +3150,118 @@ public class LogoParser extends Parser {
 
 	public static final BitSet FOLLOW_stats_in_prog123 = new BitSet(new long[]{0x0000000000000000L});
 	public static final BitSet FOLLOW_EOF_in_prog125 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_stat_in_stats148 = new BitSet(new long[]{0x0000006FE60AE870L});
+	public static final BitSet FOLLOW_stat_in_stats148 = new BitSet(new long[]{0x000000DFCC15D070L});
 	public static final BitSet FOLLOW_stats_in_stats150 = new BitSet(new long[]{0x0000000000000002L});
 	public static final BitSet FOLLOW_stat_in_stats168 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_FORWARD_in_stat195 = new BitSet(new long[]{0x0001440011000000L});
+	public static final BitSet FOLLOW_FORWARD_in_stat195 = new BitSet(new long[]{0x0002880022000000L});
 	public static final BitSet FOLLOW_expr_in_stat197 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_RIGHT_in_stat213 = new BitSet(new long[]{0x0001440011000000L});
+	public static final BitSet FOLLOW_RIGHT_in_stat213 = new BitSet(new long[]{0x0002880022000000L});
 	public static final BitSet FOLLOW_expr_in_stat215 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_LEFT_in_stat231 = new BitSet(new long[]{0x0001440011000000L});
+	public static final BitSet FOLLOW_LEFT_in_stat231 = new BitSet(new long[]{0x0002880022000000L});
 	public static final BitSet FOLLOW_expr_in_stat233 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_BACK_in_stat249 = new BitSet(new long[]{0x0001440011000000L});
+	public static final BitSet FOLLOW_BACK_in_stat249 = new BitSet(new long[]{0x0002880022000000L});
 	public static final BitSet FOLLOW_expr_in_stat251 = new BitSet(new long[]{0x0000000000000002L});
 	public static final BitSet FOLLOW_PENUP_in_stat267 = new BitSet(new long[]{0x0000000000000002L});
 	public static final BitSet FOLLOW_PENDOWN_in_stat281 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_REPEAT_in_stat295 = new BitSet(new long[]{0x0001440011000000L});
-	public static final BitSet FOLLOW_expr_in_stat297 = new BitSet(new long[]{0x0002000000000000L});
-	public static final BitSet FOLLOW_49_in_stat299 = new BitSet(new long[]{0x0000006FE60AE870L});
-	public static final BitSet FOLLOW_stats_in_stat301 = new BitSet(new long[]{0x0004000000000000L});
-	public static final BitSet FOLLOW_50_in_stat303 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_MAKE_in_stat321 = new BitSet(new long[]{0x0000020000000000L});
-	public static final BitSet FOLLOW_41_in_stat323 = new BitSet(new long[]{0x0000008000000000L});
-	public static final BitSet FOLLOW_VAR_in_stat325 = new BitSet(new long[]{0x0001440011000000L});
+	public static final BitSet FOLLOW_REPEAT_in_stat295 = new BitSet(new long[]{0x0002880022000000L});
+	public static final BitSet FOLLOW_expr_in_stat297 = new BitSet(new long[]{0x0004000000000000L});
+	public static final BitSet FOLLOW_50_in_stat299 = new BitSet(new long[]{0x000000DFCC15D070L});
+	public static final BitSet FOLLOW_stats_in_stat301 = new BitSet(new long[]{0x0008000000000000L});
+	public static final BitSet FOLLOW_51_in_stat303 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_MAKE_in_stat321 = new BitSet(new long[]{0x0000040000000000L});
+	public static final BitSet FOLLOW_42_in_stat323 = new BitSet(new long[]{0x0000010000000000L});
+	public static final BitSet FOLLOW_VAR_in_stat325 = new BitSet(new long[]{0x0002880022000000L});
 	public static final BitSet FOLLOW_expr_in_stat327 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_LOCAL_in_stat345 = new BitSet(new long[]{0x0000020000000000L});
-	public static final BitSet FOLLOW_41_in_stat347 = new BitSet(new long[]{0x0000008000000000L});
+	public static final BitSet FOLLOW_LOCAL_in_stat345 = new BitSet(new long[]{0x0000040000000000L});
+	public static final BitSet FOLLOW_42_in_stat347 = new BitSet(new long[]{0x0000010000000000L});
 	public static final BitSet FOLLOW_VAR_in_stat349 = new BitSet(new long[]{0x0000000000000002L});
 	public static final BitSet FOLLOW_CLEAR_in_stat365 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_IF_in_stat379 = new BitSet(new long[]{0x0001440011000000L});
-	public static final BitSet FOLLOW_bexpr_in_stat381 = new BitSet(new long[]{0x0002000000000000L});
-	public static final BitSet FOLLOW_49_in_stat383 = new BitSet(new long[]{0x0000006FE60AE870L});
-	public static final BitSet FOLLOW_stats_in_stat385 = new BitSet(new long[]{0x0004000000000000L});
-	public static final BitSet FOLLOW_50_in_stat387 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_IF_in_stat379 = new BitSet(new long[]{0x0002880022000000L});
+	public static final BitSet FOLLOW_bexpr_in_stat381 = new BitSet(new long[]{0x0004000000000000L});
+	public static final BitSet FOLLOW_50_in_stat383 = new BitSet(new long[]{0x000000DFCC15D070L});
+	public static final BitSet FOLLOW_stats_in_stat385 = new BitSet(new long[]{0x0008000000000000L});
+	public static final BitSet FOLLOW_51_in_stat387 = new BitSet(new long[]{0x0000000000000002L});
 	public static final BitSet FOLLOW_SHOW_in_stat405 = new BitSet(new long[]{0x0000000000000002L});
 	public static final BitSet FOLLOW_HIDE_in_stat413 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_SETPCRGB_in_stat421 = new BitSet(new long[]{0x0001440011000000L});
-	public static final BitSet FOLLOW_expr_in_stat424 = new BitSet(new long[]{0x0001440011000000L});
-	public static final BitSet FOLLOW_expr_in_stat426 = new BitSet(new long[]{0x0001440011000000L});
+	public static final BitSet FOLLOW_SETPCRGB_in_stat421 = new BitSet(new long[]{0x0002880022000000L});
+	public static final BitSet FOLLOW_expr_in_stat424 = new BitSet(new long[]{0x0002880022000000L});
+	public static final BitSet FOLLOW_expr_in_stat426 = new BitSet(new long[]{0x0002880022000000L});
 	public static final BitSet FOLLOW_expr_in_stat428 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_SETPENSIZE_in_stat436 = new BitSet(new long[]{0x0001440011000000L});
+	public static final BitSet FOLLOW_SETPENSIZE_in_stat436 = new BitSet(new long[]{0x0002880022000000L});
 	public static final BitSet FOLLOW_expr_in_stat438 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_SETPOS_in_stat454 = new BitSet(new long[]{0x0001440011000000L});
-	public static final BitSet FOLLOW_expr_in_stat457 = new BitSet(new long[]{0x0001440011000000L});
+	public static final BitSet FOLLOW_SETPOS_in_stat454 = new BitSet(new long[]{0x0002880022000000L});
+	public static final BitSet FOLLOW_expr_in_stat457 = new BitSet(new long[]{0x0002880022000000L});
 	public static final BitSet FOLLOW_expr_in_stat459 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_SETH_in_stat467 = new BitSet(new long[]{0x0001440011000000L});
+	public static final BitSet FOLLOW_SETH_in_stat467 = new BitSet(new long[]{0x0002880022000000L});
 	public static final BitSet FOLLOW_expr_in_stat470 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_TO_in_stat478 = new BitSet(new long[]{0x0000008000000000L});
-	public static final BitSet FOLLOW_VAR_in_stat480 = new BitSet(new long[]{0x0001006FE60AE870L});
-	public static final BitSet FOLLOW_params_in_stat482 = new BitSet(new long[]{0x0000006FE60AE870L});
-	public static final BitSet FOLLOW_stats_in_stat484 = new BitSet(new long[]{0x0000000000000200L});
+	public static final BitSet FOLLOW_TO_in_stat478 = new BitSet(new long[]{0x0000010000000000L});
+	public static final BitSet FOLLOW_VAR_in_stat480 = new BitSet(new long[]{0x000200DFCC15D070L});
+	public static final BitSet FOLLOW_params_in_stat482 = new BitSet(new long[]{0x000000DFCC15D070L});
+	public static final BitSet FOLLOW_stats_in_stat484 = new BitSet(new long[]{0x0000000000000400L});
 	public static final BitSet FOLLOW_END_in_stat486 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_CALL_in_stat506 = new BitSet(new long[]{0x0000008000000000L});
-	public static final BitSet FOLLOW_VAR_in_stat508 = new BitSet(new long[]{0x0001440011000000L});
+	public static final BitSet FOLLOW_CALL_in_stat506 = new BitSet(new long[]{0x0000010000000000L});
+	public static final BitSet FOLLOW_VAR_in_stat508 = new BitSet(new long[]{0x0002880022000000L});
 	public static final BitSet FOLLOW_exprs_in_stat510 = new BitSet(new long[]{0x0000000000000002L});
 	public static final BitSet FOLLOW_STOP_in_stat528 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_48_in_params546 = new BitSet(new long[]{0x0000008000000000L});
-	public static final BitSet FOLLOW_VAR_in_params548 = new BitSet(new long[]{0x0001000000000002L});
-	public static final BitSet FOLLOW_expr_in_exprs576 = new BitSet(new long[]{0x0001440011000002L});
-	public static final BitSet FOLLOW_expr_in_bexpr605 = new BitSet(new long[]{0x0000000000000400L});
-	public static final BitSet FOLLOW_EQ_in_bexpr607 = new BitSet(new long[]{0x0001440011000000L});
+	public static final BitSet FOLLOW_49_in_params546 = new BitSet(new long[]{0x0000010000000000L});
+	public static final BitSet FOLLOW_VAR_in_params548 = new BitSet(new long[]{0x0002000000000002L});
+	public static final BitSet FOLLOW_expr_in_exprs576 = new BitSet(new long[]{0x0002880022000002L});
+	public static final BitSet FOLLOW_expr_in_bexpr605 = new BitSet(new long[]{0x0000000000000800L});
+	public static final BitSet FOLLOW_EQ_in_bexpr607 = new BitSet(new long[]{0x0002880022000000L});
 	public static final BitSet FOLLOW_expr_in_bexpr610 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_expr_in_bexpr618 = new BitSet(new long[]{0x0000000000800000L});
-	public static final BitSet FOLLOW_NEQ_in_bexpr620 = new BitSet(new long[]{0x0001440011000000L});
+	public static final BitSet FOLLOW_expr_in_bexpr618 = new BitSet(new long[]{0x0000000001000000L});
+	public static final BitSet FOLLOW_NEQ_in_bexpr620 = new BitSet(new long[]{0x0002880022000000L});
 	public static final BitSet FOLLOW_expr_in_bexpr623 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_expr_in_bexpr631 = new BitSet(new long[]{0x0000000000010000L});
-	public static final BitSet FOLLOW_LESS_in_bexpr633 = new BitSet(new long[]{0x0001440011000000L});
+	public static final BitSet FOLLOW_expr_in_bexpr631 = new BitSet(new long[]{0x0000000000020000L});
+	public static final BitSet FOLLOW_LESS_in_bexpr633 = new BitSet(new long[]{0x0002880022000000L});
 	public static final BitSet FOLLOW_expr_in_bexpr636 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_expr_in_bexpr644 = new BitSet(new long[]{0x0000000000001000L});
-	public static final BitSet FOLLOW_GREATER_in_bexpr646 = new BitSet(new long[]{0x0001440011000000L});
+	public static final BitSet FOLLOW_expr_in_bexpr644 = new BitSet(new long[]{0x0000000000002000L});
+	public static final BitSet FOLLOW_GREATER_in_bexpr646 = new BitSet(new long[]{0x0002880022000000L});
 	public static final BitSet FOLLOW_expr_in_bexpr649 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_multExpr_in_expr665 = new BitSet(new long[]{0x0000200000000000L});
-	public static final BitSet FOLLOW_45_in_expr667 = new BitSet(new long[]{0x0001440011000000L});
+	public static final BitSet FOLLOW_multExpr_in_expr665 = new BitSet(new long[]{0x0000400000000000L});
+	public static final BitSet FOLLOW_46_in_expr667 = new BitSet(new long[]{0x0002880022000000L});
 	public static final BitSet FOLLOW_expr_in_expr669 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_multExpr_in_expr687 = new BitSet(new long[]{0x0000400000000000L});
-	public static final BitSet FOLLOW_46_in_expr689 = new BitSet(new long[]{0x0001440011000000L});
+	public static final BitSet FOLLOW_multExpr_in_expr687 = new BitSet(new long[]{0x0000800000000000L});
+	public static final BitSet FOLLOW_47_in_expr689 = new BitSet(new long[]{0x0002880022000000L});
 	public static final BitSet FOLLOW_expr_in_expr691 = new BitSet(new long[]{0x0000000000000002L});
 	public static final BitSet FOLLOW_multExpr_in_expr706 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_atom_in_multExpr723 = new BitSet(new long[]{0x0000100000000000L});
-	public static final BitSet FOLLOW_44_in_multExpr725 = new BitSet(new long[]{0x0001440011000000L});
+	public static final BitSet FOLLOW_atom_in_multExpr723 = new BitSet(new long[]{0x0000200000000000L});
+	public static final BitSet FOLLOW_45_in_multExpr725 = new BitSet(new long[]{0x0002880022000000L});
 	public static final BitSet FOLLOW_multExpr_in_multExpr727 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_atom_in_multExpr745 = new BitSet(new long[]{0x0000800000000000L});
-	public static final BitSet FOLLOW_47_in_multExpr747 = new BitSet(new long[]{0x0001440011000000L});
+	public static final BitSet FOLLOW_atom_in_multExpr745 = new BitSet(new long[]{0x0001000000000000L});
+	public static final BitSet FOLLOW_48_in_multExpr747 = new BitSet(new long[]{0x0002880022000000L});
 	public static final BitSet FOLLOW_multExpr_in_multExpr749 = new BitSet(new long[]{0x0000000000000002L});
 	public static final BitSet FOLLOW_atom_in_multExpr764 = new BitSet(new long[]{0x0000000000000002L});
 	public static final BitSet FOLLOW_NUM_in_atom781 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_42_in_atom792 = new BitSet(new long[]{0x0001440011000000L});
-	public static final BitSet FOLLOW_expr_in_atom794 = new BitSet(new long[]{0x0000080000000000L});
-	public static final BitSet FOLLOW_43_in_atom796 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_46_in_atom805 = new BitSet(new long[]{0x0001440011000000L});
+	public static final BitSet FOLLOW_43_in_atom792 = new BitSet(new long[]{0x0002880022000000L});
+	public static final BitSet FOLLOW_expr_in_atom794 = new BitSet(new long[]{0x0000100000000000L});
+	public static final BitSet FOLLOW_44_in_atom796 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_47_in_atom805 = new BitSet(new long[]{0x0002880022000000L});
 	public static final BitSet FOLLOW_atom_in_atom807 = new BitSet(new long[]{0x0000000000000002L});
 	public static final BitSet FOLLOW_REPCOUNT_in_atom823 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_48_in_atom835 = new BitSet(new long[]{0x0000008000000000L});
+	public static final BitSet FOLLOW_49_in_atom835 = new BitSet(new long[]{0x0000010000000000L});
 	public static final BitSet FOLLOW_VAR_in_atom837 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_stat_in_synpred1_Logo148 = new BitSet(new long[]{0x0000006FE60AE870L});
+	public static final BitSet FOLLOW_stat_in_synpred1_Logo148 = new BitSet(new long[]{0x000000DFCC15D070L});
 	public static final BitSet FOLLOW_stats_in_synpred1_Logo150 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_expr_in_synpred23_Logo605 = new BitSet(new long[]{0x0000000000000400L});
-	public static final BitSet FOLLOW_EQ_in_synpred23_Logo607 = new BitSet(new long[]{0x0001440011000000L});
+	public static final BitSet FOLLOW_expr_in_synpred23_Logo605 = new BitSet(new long[]{0x0000000000000800L});
+	public static final BitSet FOLLOW_EQ_in_synpred23_Logo607 = new BitSet(new long[]{0x0002880022000000L});
 	public static final BitSet FOLLOW_expr_in_synpred23_Logo610 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_expr_in_synpred24_Logo618 = new BitSet(new long[]{0x0000000000800000L});
-	public static final BitSet FOLLOW_NEQ_in_synpred24_Logo620 = new BitSet(new long[]{0x0001440011000000L});
+	public static final BitSet FOLLOW_expr_in_synpred24_Logo618 = new BitSet(new long[]{0x0000000001000000L});
+	public static final BitSet FOLLOW_NEQ_in_synpred24_Logo620 = new BitSet(new long[]{0x0002880022000000L});
 	public static final BitSet FOLLOW_expr_in_synpred24_Logo623 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_expr_in_synpred25_Logo631 = new BitSet(new long[]{0x0000000000010000L});
-	public static final BitSet FOLLOW_LESS_in_synpred25_Logo633 = new BitSet(new long[]{0x0001440011000000L});
+	public static final BitSet FOLLOW_expr_in_synpred25_Logo631 = new BitSet(new long[]{0x0000000000020000L});
+	public static final BitSet FOLLOW_LESS_in_synpred25_Logo633 = new BitSet(new long[]{0x0002880022000000L});
 	public static final BitSet FOLLOW_expr_in_synpred25_Logo636 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_multExpr_in_synpred26_Logo665 = new BitSet(new long[]{0x0000200000000000L});
-	public static final BitSet FOLLOW_45_in_synpred26_Logo667 = new BitSet(new long[]{0x0001440011000000L});
+	public static final BitSet FOLLOW_multExpr_in_synpred26_Logo665 = new BitSet(new long[]{0x0000400000000000L});
+	public static final BitSet FOLLOW_46_in_synpred26_Logo667 = new BitSet(new long[]{0x0002880022000000L});
 	public static final BitSet FOLLOW_expr_in_synpred26_Logo669 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_multExpr_in_synpred27_Logo687 = new BitSet(new long[]{0x0000400000000000L});
-	public static final BitSet FOLLOW_46_in_synpred27_Logo689 = new BitSet(new long[]{0x0001440011000000L});
+	public static final BitSet FOLLOW_multExpr_in_synpred27_Logo687 = new BitSet(new long[]{0x0000800000000000L});
+	public static final BitSet FOLLOW_47_in_synpred27_Logo689 = new BitSet(new long[]{0x0002880022000000L});
 	public static final BitSet FOLLOW_expr_in_synpred27_Logo691 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_atom_in_synpred28_Logo723 = new BitSet(new long[]{0x0000100000000000L});
-	public static final BitSet FOLLOW_44_in_synpred28_Logo725 = new BitSet(new long[]{0x0001440011000000L});
+	public static final BitSet FOLLOW_atom_in_synpred28_Logo723 = new BitSet(new long[]{0x0000200000000000L});
+	public static final BitSet FOLLOW_45_in_synpred28_Logo725 = new BitSet(new long[]{0x0002880022000000L});
 	public static final BitSet FOLLOW_multExpr_in_synpred28_Logo727 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_atom_in_synpred29_Logo745 = new BitSet(new long[]{0x0000800000000000L});
-	public static final BitSet FOLLOW_47_in_synpred29_Logo747 = new BitSet(new long[]{0x0001440011000000L});
+	public static final BitSet FOLLOW_atom_in_synpred29_Logo745 = new BitSet(new long[]{0x0001000000000000L});
+	public static final BitSet FOLLOW_48_in_synpred29_Logo747 = new BitSet(new long[]{0x0002880022000000L});
 	public static final BitSet FOLLOW_multExpr_in_synpred29_Logo749 = new BitSet(new long[]{0x0000000000000002L});
 }
