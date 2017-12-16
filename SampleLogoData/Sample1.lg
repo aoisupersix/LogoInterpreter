@@ -1,0 +1,13 @@
+TO draw :num :size
+    REPEAT :num [
+        MAKE "C 1-REPCOUNT / :num
+        SETPENSIZE 1 * REPCOUNT
+        SETPCRGB :C 1-:C :C
+        FD :num * 0.2 RT :size
+     ]
+END
+
+PU
+SETPOS 150 120
+PD
+REPEAT 30 [ CALL draw REPCOUNT 3]

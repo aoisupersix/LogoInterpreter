@@ -5,7 +5,6 @@ TO drawE :size :r :g :b
     MAKE "y :size / 2
     LOCAL "startPos
     MAKE "startPos 150 - :size
-    //komennto
     SETPCRGB :r :g :b
     SETPENSIZE :size * 0.1
     PU
@@ -25,6 +24,6 @@ END
 MAKE "x 10
 REPEAT :x [
     MAKE "c REPCOUNT / :x
-    CALL drawE 5*REPCOUNT 1-:c 1-:c 1-:c
+    CALL drawE 5*REPCOUNT :c :c :c
 ]
 CALL drawE 50 0 0 0
