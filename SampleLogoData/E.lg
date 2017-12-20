@@ -1,21 +1,21 @@
+#"E"の字を描く手続き
 TO drawE :size :r :g :b
-    LOCAL "x
-    MAKE "x :size
     LOCAL "y
     MAKE "y :size / 2
     LOCAL "startPos
-    MAKE "startPos 150 - :size
+    MAKE "startPos 150 - :size / 2
     SETPCRGB :r :g :b
     SETPENSIZE :size * 0.1
     PU
-    SETPOS 150 - :x 150 - :size SETH 90
+    SETPOS :startPos :startPos SETH 90
     PD
-    FD :size
+    FD :size #縦線の描画
     PU
-    SETPOS 150 - :x 150 - :size SETH 0
+    SETPOS :startPos :startPos SETH 0
+    #横線の描画
     REPEAT 3 [
         PU
-        SETPOS 150 - :x (150 - :size) + :y * (REPCOUNT - 1)
+        SETPOS :startPos :startPos + :y * (REPCOUNT - 1)
         PD
         FD :size
     ]
@@ -24,6 +24,6 @@ END
 MAKE "x 10
 REPEAT :x [
     MAKE "c REPCOUNT / :x
-    CALL drawE 5*REPCOUNT :c :c :c
+    CALL drawE 20*REPCOUNT 1-:c 1-:c :c
 ]
-CALL drawE 50 0 0 0
+CALL drawE 200 0 0 0
